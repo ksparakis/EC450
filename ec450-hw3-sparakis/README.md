@@ -1,15 +1,12 @@
 Konstantino Sparakis, U47131572, Sparakis@bu.edu
 
-##HW 1 
+##HW 3
 
-####What was your overall strategy?
-  My overall strategy was to figure out first of all how to get everything to work. It was my first time working with the MSPBR430
-  which caused a lot of overhead on set up. After setting everything up it took me a while to understand the example on blinking an led, but once I got that
-  down I just used a global variable for unit which is 1 unit of time delay and I used for loops for the delay. I worked on getting the S down and once I had the code for that it was copy paste and edit the delay variables to get the SOS to work properly.
-  
-####What global variables did you use to keep track of the state of the system between WDT interrupts?
-  The only global variables needed where P1DIR which would turn the light on or off depending on the xor of the regester value.I didnt realy need to keep track
-of the rest as I just wrote my code in straight line type fashion. I also used a gloabl unit variable to have an easy way to decipher the time delays.
+####How did I implement the record?
+   I had a global variable for the mode in which the code was in called mode. If mode was = 1 im in record mode if the mode = 0 the board is in playback mode. Within playback there are 2 modes, the global variable firstRun keeps track of this. When firstRun = 0 there is nothing to playback and the green light blinks continoulsy to show this. When firstRun = 1 the code runs through the message recorded and plays it back. Another global variabl I needed was glob wich is a counter , this counts how many times wdt has been executed and on button click I reset this in order to get the time length wich the button should be on or off. THe last global variable I used was countSinceLastButtonAction wich kept track of the time  bettween button actions and if this ever surpassed a certain time it changes the record mode to playbackmode.
+   
+   For recording the time I used the variable glob , when the button was clicked it would save the value of glob into an int array and reset. This way I got the exact WDT count for how long the button was clicked and then I could go back to it like a forloop using the WDT timmer running through it incrementing a variable count running through the array turining on and off the light.
 
-####What hardware did you use and how was it connected (for this HW the answer is probably to just way which on-board LED you used)
-  I used the LED1 on the board to blink on and off to display the sos message.
+#### Limitations
+  At first I tried to implement an interupt for the button. I got the interrupt working and some functionality , but there would always be some issue. I assume this is because the watchdog interupt would interupt the code excecution of my button interupt and back and forth so this didnt work. I finaly moved onto using the example provided by Proffesor giles.
+  A limitation within my code is that there can only be 20 button actions as this is the limit I hard coded into the int array size holding the time value for each button action.
