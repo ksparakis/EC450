@@ -12,15 +12,20 @@ Button 5: Change song
 
 #### Led States
 
-Green off & Red off: Song 0 is playing and deafult settings
-Green off & Red On (long time): Song 0 has been paused
-Green off & Red On (Blinking slow): Song 0 is playing at a slower tempo than default
-Green off & Red On (Blinking fast): Song 0 is playing at a faster tempo than default
+| Green LED     | Red LED       | State |
+| ------------- |:-------------| -----|
+| off           | off           | Song 0 is playing at default Settings |
+| off           | on            | Song 0 has been paused |
+| off           | blinking slow | Song 0 is playing at a slower tempo than default |
+| off           | blinking fast | Song 0 is playing at a faster tempo than default |
+| on            | off           | Song 1 is playing at default Settings |
+| on            | on            | Song 1 has been paused |
+| on            | blinking slow | Song 1 is playing at a slower tempo than default |
+| on            | blinking fast | Song 1 is playing at a faster tempo than default |
 
-Green ON & Red off: Song 1 is playing and deafult settings
-Green ON & Red On (long time): Song 1 has been paused
-Green ON & Red On (Blinking slow): Song 1 is playing at a slower tempo than default
-Green ON & Red On (Blinking fast): Song 1 is playing at a faster tempo than default
+
+
+
 
 
 --------
