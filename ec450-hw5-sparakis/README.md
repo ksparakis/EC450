@@ -4,11 +4,18 @@
 ![alt text](https://github.com/Giles-ECE-BU/ksparakis/blob/master/ec450-hw5-sparakis/HW5-Schematic.png "Design Schematic")
 
 #### Button Corralation 
+
+
 Button 1: Play or Pause
+<br />
 Button 2: Speed up
+<br />
 Button 3: Speed down
+<br />
 Button 4: Reset
+<br />
 Button 5: Change song
+
 
 #### Led States
 
