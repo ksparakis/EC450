@@ -1,7 +1,7 @@
 #HW 5
 
 ### Schematic
-
+![alt text](https://github.com/Giles-ECE-BU/ksparakis/blob/master/ec450-hw5-sparakis/HW5-Schematic.png "Design Schematic")
 --------
 
 ### Design
