@@ -2,8 +2,28 @@
 
 ### Schematic
 ![alt text](https://github.com/Giles-ECE-BU/ksparakis/blob/master/ec450-hw5-sparakis/HW5-Schematic.png "Design Schematic")
---------
 
+#### Button Corralation 
+Button 1: Play or Pause
+Button 2: Speed up
+Button 3: Speed down
+Button 4: Reset
+Button 5: Change song
+
+#### Led States
+
+Green off & Red off: Song 0 is playing and deafult settings
+Green off & Red On (long time): Song 0 has been paused
+Green off & Red On (Blinking slow): Song 0 is playing at a slower tempo than default
+Green off & Red On (Blinking fast): Song 0 is playing at a faster tempo than default
+
+Green ON & Red off: Song 1 is playing and deafult settings
+Green ON & Red On (long time): Song 1 has been paused
+Green ON & Red On (Blinking slow): Song 1 is playing at a slower tempo than default
+Green ON & Red On (Blinking fast): Song 1 is playing at a faster tempo than default
+
+
+--------
 ### Design
 
 The Design is straight forward given the tools we are given. I implemented the timer inorder to produce the pitches. Using a frequency chart and some simple math I was able to get the right pitch for each letter.
